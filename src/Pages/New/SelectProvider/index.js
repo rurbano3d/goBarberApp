@@ -25,7 +25,7 @@ export default function SelectProvider({ navigation }) {
           renderItem={({ item: provider }) => (
             <Provider
               onPress={() =>
-                navigation.navigate('SelectDateTime', { providers })
+                navigation.navigate('SelectDateTime', { provider })
               }
             >
               <Avatar
@@ -45,6 +45,7 @@ export default function SelectProvider({ navigation }) {
 }
 
 SelectProvider.navigationOptions = ({ navigation }) => ({
+  headerTitleStyle: { textAlign: 'center', flex: 0.8 },
   title: 'Selecione o prestador',
   headerLeft: () => (
     <TouchableOpacity
